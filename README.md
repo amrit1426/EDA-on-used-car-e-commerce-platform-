@@ -89,7 +89,8 @@ This repository contains a comprehensive EDA workflow focused on analyzing a use
 5. Data Pre-profiling  
 6. Data Pre-processing  
 7. Data Post-profiling  
-8. Exploratory Data
+8. Exploratory Data Analysis
+9. Summary
 ---
 
 ## 🧰 Tech Stack & Libraries

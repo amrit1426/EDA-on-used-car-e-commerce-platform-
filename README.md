@@ -90,3 +90,13 @@ This repository contains a comprehensive EDA workflow focused on analyzing a use
 6. Data Pre-processing  
 7. Data Post-profiling  
 8. Exploratory Data
+---
+
+## 🧰 Tech Stack & Libraries
+
+- Python 3  
+- NumPy  
+- Pandas  
+- Matplotlib & Seaborn  
+- Y-data profiling  
+- Jupyter Notebook  

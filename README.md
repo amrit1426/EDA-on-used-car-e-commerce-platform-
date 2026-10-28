@@ -101,3 +101,8 @@ This repository contains a comprehensive EDA workflow focused on analyzing a use
 - Matplotlib & Seaborn  
 - Y-data profiling  
 - Jupyter Notebook  
+- Streamlit  
+
+## 🚀 Live App
+
+- **Used Car EDA Dashboard:** https://used-car-ecomm-dash.streamlit.app/

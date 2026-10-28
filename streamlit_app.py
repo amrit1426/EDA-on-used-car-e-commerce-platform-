@@ -33,10 +33,10 @@ def load_data():
     
     # Missing value treatment
     for col in df.columns:
-        if df[col].dtypes == 'object':
-            df[col] = df[col].fillna(df[col].mode()[0])
-        else:
+        if pd.api.types.is_numeric_dtype(df[col]):
             df[col] = df[col].fillna(df[col].median())
+        else:
+            df[col] = df[col].fillna(df[col].mode()[0])
     
     return df
 

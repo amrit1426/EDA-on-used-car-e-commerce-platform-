@@ -65,12 +65,26 @@ with st.sidebar:
         options=df["Make"].dropna().unique(),
         default=[],
     )
+    price_min, price_max = st.slider(
+        "Price Range (₹)",
+        int(df["Price"].min()),
+        int(df["Price"].max()),
+        (int(df["Price"].min()), int(df["Price"].max())),
+    )
+    year_min, year_max = st.slider(
+        "Year Range",
+        int(df["Year"].min()),
+        int(df["Year"].max()),
+        (int(df["Year"].min()), int(df["Year"].max())),
+    )
 
 # Apply filters
 filtered = df[
     df["Fuel Type"].isin(fuel_types)
     & df["Transmission"].isin(transmissions)
     & df["Seller Type"].isin(seller_types)
+    & df["Price"].between(price_min, price_max)
+    & df["Year"].between(year_min, year_max)
 ]
 if makes:
     filtered = filtered[filtered["Make"].isin(makes)]

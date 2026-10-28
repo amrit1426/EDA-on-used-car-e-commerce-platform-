@@ -92,17 +92,21 @@ tab_overview, tab_analysis, tab_details = st.tabs(["Overview", "Analysis", "Deta
 
 with tab_overview:
     st.subheader("Key Metrics")
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Total Listings", len(filtered))
     col2.metric(
         "Avg Price (₹)",
         f"{filtered['Price'].mean():,.0f}" if len(filtered) else "N/A",
     )
     col3.metric(
-        "Avg Year",
-        f"{filtered['Year'].mean():.0f}" if len(filtered) else "N/A",
+        "Max Price (₹)",
+        f"{filtered['Price'].max():,.0f}" if len(filtered) else "N/A",
     )
     col4.metric(
+        "Min Price (₹)",
+        f"{filtered['Price'].min():,.0f}" if len(filtered) else "N/A",
+    )
+    col5.metric(
         "Avg Km",
         f"{filtered['Kilometer'].mean():,.0f}" if len(filtered) else "N/A",
     )
